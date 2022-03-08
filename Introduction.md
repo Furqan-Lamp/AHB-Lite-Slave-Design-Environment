@@ -14,3 +14,39 @@ The **Environment** contains the **Generator** which generates the transaction a
 A Final result status is printed at the end.
 
 The Following Project Covers **Sequential** and **Non-Sequential** Cases.
+
+![Screenshot from 2022-03-08 10-58-10](https://user-images.githubusercontent.com/62382286/157176327-e0a0b5e3-f3b3-4b4d-9ca3-2832f19e1264.png)
+
+
+Following are the key components of a design verification environment:
+**Transaction**
+- The Transaction class is used as a way of communication between Generator-Driver and
+Monitor-Scoreboard. Fields/Signals required to generate the stimulus are declared in this
+class.
+**Interface**
+- It contains design signals that can be driven or monitored.
+**Generator**
+- Generates the stimulus (create and randomize the transaction class) and send it to Driver
+**Driver**
+- Receives the stimulus (transaction) from a generator and drives the packet level data
+inside the transaction into the DUT through the interface.
+**Monitor**
+- Observes the activity on interface signals and converts into packet level data which is
+sent to the scoreboard.
+**Scoreboard**
+- Receives data items from monitors and compares them with expected values. Expected
+values can be either golden reference values or generated from the reference model.
+**Environment**
+- The environment is a container class for grouping all components like generator, driver,
+monitor and scoreboard.
+**Test**
+- The test is responsible for creating the environment and initiating the stimulus driving.
+**Testbench Top**
+- This is the topmost file, which connects the DUT and Test. It consists of DUT, Test and
+interface instances. The interface connects the DUT and Test.
+
+
+Key Concepts : 
+  - Master judges how to send the trasnaction and slave is responsible for doing the job. Slave can only initiate wait states. _Error Response_
+  - Wrapping is done respect to size and adding the lower bits and discarding the carry.
+  - The Following is the link to the full project on EDA Tool : https://www.edaplayground.com/x/DDqU
