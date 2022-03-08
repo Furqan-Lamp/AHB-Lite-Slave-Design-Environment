@@ -18,7 +18,7 @@ class transaction;
 	rand bit   [2:0] HBURST;  // Burst Mode Type e.g (3 Bit Burst)
 	rand logic [1:0] HTRANS;  // Type Of transaction
     rand logic [3:0] HPROT; // Protection But not used currently
-  	rand logic 		 ERROR;
+  	rand logic 		 ERROR; 
     rand bit		 HSEL;
   
 	// Output Signals from DUT //  
