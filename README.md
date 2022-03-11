@@ -65,4 +65,4 @@ interface instances. The interface connects the DUT and Test.
 Key Concepts : 
   - Master judges how to send the trasnaction and slave is responsible for doing the job. Slave can only initiate wait states. _Error Response_
   - Wrapping is done respect to size and adding the lower bits and discarding the carry.
-  - The Following is the link to the full project on EDA Tool : https://www.edaplayground.com/x/YEWs
+  - The Following is the link to the full project on EDA Tool : https://www.edaplayground.com/x/DQ8K
